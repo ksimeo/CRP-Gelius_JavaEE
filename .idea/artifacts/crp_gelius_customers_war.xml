@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="crp-gelius-customers:war">
+    <output-path>$PROJECT_DIR$/crp-gelius-customers/target</output-path>
+    <root id="archive" name="CRP-Gelius_CustomersPartJ2EE.war">
+      <element id="artifact" artifact-name="crp-gelius-customers:war exploded" />
+    </root>
+  </artifact>
+</component>

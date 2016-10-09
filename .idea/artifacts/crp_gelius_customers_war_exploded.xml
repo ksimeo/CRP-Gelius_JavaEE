@@ -1,0 +1,41 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="crp-gelius-customers:war exploded">
+    <output-path>$PROJECT_DIR$/crp-gelius-customers/target/CRP-Gelius_CustomersPartJ2EE</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="crp-gelius-customers" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: javax:javaee-web-api:7.0" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:3.2.10.RELEASE" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.3" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:3.2.10.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:3.2.10.RELEASE" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.2.10.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:3.2.10.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:3.2.10.RELEASE" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+          <element id="archive" name="crp-gelius-entities-1.0.jar">
+            <element id="module-output" name="crp-gelius-entities" />
+          </element>
+          <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final" />
+          <element id="archive" name="crp-gelius-api-1.0.jar">
+            <element id="module-output" name="crp-gelius-api" />
+          </element>
+          <element id="archive" name="crp-gelius-impl-1.0.jar">
+            <element id="module-output" name="crp-gelius-impl" />
+          </element>
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.3" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.2" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/crp-gelius-customers/target/CRP-Gelius_CustomersPartJ2EE/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="crp-gelius-customers/web/Web" />
+    </root>
+  </artifact>
+</component>

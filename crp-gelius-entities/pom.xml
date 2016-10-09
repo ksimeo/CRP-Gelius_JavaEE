@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0">
+    <parent>
+        <artifactId>crp-gelius</artifactId>
+        <groupId>com.ksimeo.yanu</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.ksimeo.yanu.entities</groupId>
+    <artifactId>crp-gelius-entities</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0</version>
+    <name>CRP-Gelius_Entities</name>
+    <url>http://maven.apache.org</url>
+    <build>
+        <finalName>CRP_Gelius_Entities</finalName>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.0-api</artifactId>
+            <version>1.0.1.Final</version>
+        </dependency>
+    </dependencies>
+</project>

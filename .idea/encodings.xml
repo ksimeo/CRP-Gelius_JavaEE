@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/crp-gelius-api/src/main/java/com/ksimeo/yanu/api/services/UsersService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crp-gelius-customers/src/main/java/com/ksimeo/yanu/customers/controllers/commons/LogInCtrl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crp-gelius-impl/src/main/java/com/ksimeo/yanu/impl/services/UsersServImpl.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

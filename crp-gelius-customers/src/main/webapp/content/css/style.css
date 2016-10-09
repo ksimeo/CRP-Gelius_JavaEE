@@ -1,0 +1,104 @@
+body {
+    color: #84264e;
+    background-color: #e9e9e9;
+    /*background-attachment: fixed;*/
+    align-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    margin: 0;
+    width: 100%;
+
+}
+
+#enterform {
+    text-align: center;
+    margin: auto;
+}
+
+#stripe {
+    background: #84264e;
+    color: #9fa0a1;
+    box-shadow: 0.4em 0.4em 5px #9fa0a1;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+}
+
+#stripeshadowed {
+    background: #84264e;
+    color: #9fa0a1;
+    box-shadow: 0.4em 0.4em 5px #381421;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+}
+
+#highpanel  {
+    color: #fbffd5;
+}
+
+#errorpages {
+    background-color: #fbffd5;
+}
+
+#area {
+    background-color: #fbffd5;
+    resize: none;
+    width: 340px;
+}
+
+.area {
+    color: whitesmoke;
+    background-color: dimgrey;
+    resize: none;
+    width: 340px;
+}
+
+.arealine {
+    background-color: #fbffd5;
+    resize: none;
+}
+
+#details {
+    background-color: dimgrey;
+    color: white;
+    resize: none;
+}
+
+#userspalnk {
+    background-color: #FFF8DC;
+    /*background-color: azure;*/
+    border: 1px solid #381421;
+    text-align: -webkit-center;
+    border-radius: 10px;
+    padding: 15px;
+    padding-bottom: 50px;
+    width: 40%;
+    height: 55%;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 0.4em 0.4em 5px #230b12;
+}
+
+#plancreatepalnk {
+    background-color: #FFF8DC;
+    /*background-color: azure;*/
+    border: 1px solid #381421;
+    text-align: -webkit-center;
+    border-radius: 10px;
+    padding: 15px;
+    padding-bottom: 50px;
+    width: 40%;
+    height: 75%;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 0.4em 0.4em 5px #230b12;
+}
+
+#shadowed {
+    background-color: #4d182b;
+}
+
+select {
+    width: 300px; /* Ширина списка в пикселах */
+}

@@ -1,0 +1,4 @@
+#DB properties:
+db.url=jdbc:mysql://localhost:3306/crp_gelius
+db.username=root
+db.password=root

@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="crp-gelius-repository:war exploded">
+    <output-path>$PROJECT_DIR$/crp-gelius-repository/target/CRP_Gelius_Repository</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="crp-gelius-repository" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/crp-gelius-repository/target/CRP_Gelius_Repository/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="crp-gelius-repository/web/Web" />
+    </root>
+  </artifact>
+</component>
