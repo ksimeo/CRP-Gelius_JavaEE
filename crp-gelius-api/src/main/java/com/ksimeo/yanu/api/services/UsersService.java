@@ -13,6 +13,7 @@ public interface UsersService {
 
     User addUser(User usr) throws Exception;
     User getUser(String login, String passw) throws Exception;
-    List<User> getUsers();
-    List<User> getUsers(int role);
+    List<User> getUsers() throws Exception;
+    List<User> getUsers(int role) throws Exception;
+    void delUser(int id) throws Exception;
 }

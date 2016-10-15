@@ -2,7 +2,7 @@ package com.ksimeo.yanu.impl.services;
 
 import com.ksimeo.yanu.entities.models.Plan;
 import com.ksimeo.yanu.entities.models.PlansParcel;
-import com.ksimeo.yanu.api.dao.PlanDAO;
+import com.ksimeo.yanu.api.repository.dao.PlanDAO;
 import com.ksimeo.yanu.api.services.PlansService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package com.ksimeo.yanu.api.services;
 
-import com.ksimeo.yanu.entities.models.Сert;
+import com.ksimeo.yanu.entities.models.Cert;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import java.util.List;
  */
 public interface CertificatesService {
 
-    Сert addCertificate(Сert certificate);
-    Сert getCertificate(int id);
-    List<Сert> getCertificates();
+    Cert addCertificate(Cert certificate);
+    Cert getCertificate(int id);
+    List<Cert> getCertificates();
     void deleteCertificate(int id);
 }

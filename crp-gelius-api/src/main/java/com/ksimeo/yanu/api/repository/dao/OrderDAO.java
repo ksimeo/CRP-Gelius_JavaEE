@@ -1,4 +1,4 @@
-package com.ksimeo.yanu.api.dao;
+package com.ksimeo.yanu.api.repository.dao;
 
 import com.ksimeo.yanu.entities.models.Order;
 

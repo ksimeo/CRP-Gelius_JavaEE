@@ -56,7 +56,7 @@ public class PlanCreateCtrl extends HttpServlet {
         req.setAttribute("name", name);
         String surname = order.getManager().getSurname();
         req.setAttribute("surname", surname);
-        Сert cert = order.getCertificate();
+        Cert cert = order.getCertificate();
         int certId = cert.getId();
         req.setAttribute("cert_id", certId);
         String title = cert.getTitle();

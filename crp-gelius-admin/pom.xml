@@ -10,7 +10,7 @@
 	<artifactId>crp-gelius-admin</artifactId>
 	<packaging>war</packaging>
 	<version>1.0</version>
-	<name>CRP-Gelius_Admins_Webapp</name>
+	<name>CRP-Gelius_Admin</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<spring.version>3.2.10.RELEASE</spring.version>

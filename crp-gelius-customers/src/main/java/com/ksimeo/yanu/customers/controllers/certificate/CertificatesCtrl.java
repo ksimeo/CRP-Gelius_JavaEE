@@ -2,7 +2,7 @@ package com.ksimeo.yanu.customers.controllers.certificate;
 
 import com.ksimeo.yanu.api.services.CertificatesService;
 import com.ksimeo.yanu.entities.models.User;
-import com.ksimeo.yanu.entities.models.Сert;
+import com.ksimeo.yanu.entities.models.Cert;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
@@ -45,7 +45,7 @@ public class CertificatesCtrl extends HttpServlet {
         User user = (User) session.getAttribute("user");
         String login = user.getLogin();
         req.setAttribute("usrlogin", login);
-        List<Сert> certs = certServ.getCertificates();
+        List<Cert> certs = certServ.getCertificates();
         req.setAttribute("certs", certs);
         req.getRequestDispatcher("WEB-INF/certificates.jsp").forward(req, resp);
     }

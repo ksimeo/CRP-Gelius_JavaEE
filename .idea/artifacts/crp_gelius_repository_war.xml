@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="crp-gelius-repository:war">
     <output-path>$PROJECT_DIR$/crp-gelius-repository/target</output-path>
-    <root id="archive" name="CRP_Gelius_Repository.war">
+    <root id="archive" name="CRP-Gelius_Repository.war">
       <element id="artifact" artifact-name="crp-gelius-repository:war exploded" />
     </root>
   </artifact>

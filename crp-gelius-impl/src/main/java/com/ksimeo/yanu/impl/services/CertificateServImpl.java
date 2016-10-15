@@ -1,8 +1,8 @@
 package com.ksimeo.yanu.impl.services;
 
-import com.ksimeo.yanu.api.dao.CertificateDAO;
+import com.ksimeo.yanu.api.repository.dao.CertificateDAO;
 import com.ksimeo.yanu.api.services.CertificatesService;
-import com.ksimeo.yanu.entities.models.Сert;
+import com.ksimeo.yanu.entities.models.Cert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,15 +18,15 @@ public class CertificateServImpl implements CertificatesService {
     @Autowired
     private CertificateDAO certDao;
 
-    public Сert addCertificate(Сert certificate) {
+    public Cert addCertificate(Cert certificate) {
         return certDao.save(certificate);
     }
 
-    public Сert getCertificate(int id) {
+    public Cert getCertificate(int id) {
         return certDao.findOne(id);
     }
 
-    public List<Сert> getCertificates() {
+    public List<Cert> getCertificates() {
         return certDao.findAll();
     }
 

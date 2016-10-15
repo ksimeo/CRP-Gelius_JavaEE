@@ -1,7 +1,7 @@
 package com.ksimeo.yanu.customers.controllers.commons;
 
 import com.ksimeo.yanu.api.services.CertificatesService;
-import com.ksimeo.yanu.entities.models.Сert;
+import com.ksimeo.yanu.entities.models.Cert;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
@@ -40,7 +40,7 @@ public class FileDownloadCtrl extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String certID = req.getParameter("id");
         int id = Integer.parseInt(certID);
-        Сert cert = certServ.getCertificate(id);
+        Cert cert = certServ.getCertificate(id);
         // reads input file from an absolute path
         String filePath = cert.getPath();
         File downloadFile = new File(filePath);

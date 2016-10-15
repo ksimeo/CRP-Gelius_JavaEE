@@ -1,6 +1,7 @@
 package com.ksimeo.yanu.entities.models;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -10,7 +11,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name="certificates")
-public class Сert {
+public class Cert implements Serializable {
     @Id
     @GeneratedValue
     private int id;
@@ -23,30 +24,30 @@ public class Сert {
     @Column(name = "reg_date")
     private Date regDate;
 
-    public Сert() {
+    public Cert() {
         this.regDate = new Date();
     }
 
 
-    public Сert(String title) {
+    public Cert(String title) {
         this.title = title;
         this.regDate = new Date();
     }
 
-    public Сert(int id, String title, User creator) {
+    public Cert(int id, String title, User creator) {
         this.title = title;
         this.creator = creator;
         this.id = id;
     }
 
-    public Сert(String title, User creator, String path) {
+    public Cert(String title, User creator, String path) {
         this.title = title;
         this.creator = creator;
         this.path = path;
         this.regDate = new Date();
     }
 
-    public Сert(int id, String title, User creator, String path) {
+    public Cert(int id, String title, User creator, String path) {
         this.id = id;
         this.title = title;
         this.creator = creator;

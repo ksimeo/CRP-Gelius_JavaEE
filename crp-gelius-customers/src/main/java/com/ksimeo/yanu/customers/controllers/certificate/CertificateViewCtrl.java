@@ -2,7 +2,7 @@ package com.ksimeo.yanu.customers.controllers.certificate;
 
 import com.ksimeo.yanu.entities.models.Order;
 import com.ksimeo.yanu.entities.models.User;
-import com.ksimeo.yanu.entities.models.Сert;
+import com.ksimeo.yanu.entities.models.Cert;
 import com.ksimeo.yanu.api.services.CertificatesService;
 import com.ksimeo.yanu.api.services.OrdersService;
 import org.apache.log4j.Logger;
@@ -52,7 +52,7 @@ public class CertificateViewCtrl extends HttpServlet {
             String login = user.getLogin();
             req.setAttribute("id", id);
             req.setAttribute("usrlogin", login);
-            Сert cert = certServ.getCertificate(id);
+            Cert cert = certServ.getCertificate(id);
             String title = cert.getTitle();
             req.setAttribute("certtitle", title);
             String path = cert.getPath();
@@ -83,7 +83,7 @@ public class CertificateViewCtrl extends HttpServlet {
         if (quantity != null) {
             int id = Integer.parseInt(certID);
             int quant = Integer.parseInt(quantity);
-            Сert cert = certServ.getCertificate(id);
+            Cert cert = certServ.getCertificate(id);
             HttpSession session = req.getSession(false);
             User creator = (User) session.getAttribute("user");
             Order order = orderServ.addOrder(new Order(cert, quant, creator));

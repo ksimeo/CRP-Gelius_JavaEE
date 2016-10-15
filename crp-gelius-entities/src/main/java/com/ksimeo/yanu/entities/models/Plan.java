@@ -1,6 +1,7 @@
 package com.ksimeo.yanu.entities.models;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -10,7 +11,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "plans")
-public class Plan {
+public class Plan implements Serializable {
     @Id
     @GeneratedValue
     private int id;

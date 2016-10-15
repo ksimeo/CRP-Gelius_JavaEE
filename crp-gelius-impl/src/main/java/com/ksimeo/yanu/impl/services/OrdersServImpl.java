@@ -1,6 +1,6 @@
 package com.ksimeo.yanu.impl.services;
 
-import com.ksimeo.yanu.api.dao.OrderDAO;
+import com.ksimeo.yanu.api.repository.dao.OrderDAO;
 import com.ksimeo.yanu.api.services.OrdersService;
 import com.ksimeo.yanu.impl.dao.OrderDaoMock;
 import com.ksimeo.yanu.entities.models.Order;

@@ -1,7 +1,7 @@
 package com.ksimeo.yanu.impl.dao;
 
 import com.ksimeo.yanu.entities.models.Plan;
-import com.ksimeo.yanu.api.dao.PlanDAO;
+import com.ksimeo.yanu.api.repository.dao.PlanDAO;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

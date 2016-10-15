@@ -2,7 +2,7 @@ package com.ksimeo.yanu.customers.controllers.order;
 
 import com.ksimeo.yanu.entities.models.Order;
 import com.ksimeo.yanu.entities.models.User;
-import com.ksimeo.yanu.entities.models.Сert;
+import com.ksimeo.yanu.entities.models.Cert;
 import com.ksimeo.yanu.api.services.CertificatesService;
 import com.ksimeo.yanu.api.services.OrdersService;
 import org.apache.log4j.Logger;
@@ -48,7 +48,7 @@ public class OrderCreateCtrl extends HttpServlet {
         req.setAttribute("usrlogin", login);
         List<Order> orders = orderServ.getNewOrders();
         req.setAttribute("orders", orders);
-        List<Сert> certs = certServ.getCertificates();
+        List<Cert> certs = certServ.getCertificates();
         req.setAttribute("certs", certs);
         req.getRequestDispatcher("WEB-INF/ordercreate.jsp").forward(req, resp);
     }
@@ -60,7 +60,7 @@ public class OrderCreateCtrl extends HttpServlet {
         if (cert != null && !(cert.equals("")) && quant != null && !(quant.equals(""))) {
             int certID = Integer.parseInt(cert);
             int quantity = Integer.parseInt(quant);
-            Сert c = certServ.getCertificate(certID);
+            Cert c = certServ.getCertificate(certID);
             HttpSession session = req.getSession();
             User usr = (User)session.getAttribute("user");
             Order ord = new Order(c, quantity, usr);
@@ -73,7 +73,7 @@ public class OrderCreateCtrl extends HttpServlet {
             req.setAttribute("usrlogin", login);
             List<Order> orders = orderServ.getNewOrders();
             req.setAttribute("orders", orders);
-            List<Сert> certs = certServ.getCertificates();
+            List<Cert> certs = certServ.getCertificates();
             req.setAttribute("certs", certs);
             req.setAttribute("error", "Заполнены не все поля!");
             req.getRequestDispatcher("WEB-INF/ordercreate.jsp").forward(req, resp);

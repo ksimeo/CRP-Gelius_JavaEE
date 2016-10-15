@@ -1,7 +1,7 @@
 package com.ksimeo.yanu.customers.controllers.certificate;
 
 import com.ksimeo.yanu.entities.models.User;
-import com.ksimeo.yanu.entities.models.Сert;
+import com.ksimeo.yanu.entities.models.Cert;
 import com.ksimeo.yanu.api.services.CertificatesService;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -113,7 +113,7 @@ public class CertificateCreateCtrl extends HttpServlet {
 //        String userName = user.getName();
 //        String userSurname = user.getSurname();
 //        String login = user.getLogin();
-        certServ.addCertificate(new Сert(title, currUser, filePath));
+        certServ.addCertificate(new Cert(title, currUser, filePath));
         resp.sendRedirect("/certificates.do");
     }
 

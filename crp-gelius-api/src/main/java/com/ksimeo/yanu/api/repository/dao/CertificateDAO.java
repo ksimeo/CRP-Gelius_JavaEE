@@ -1,6 +1,6 @@
-package com.ksimeo.yanu.api.dao;
+package com.ksimeo.yanu.api.repository.dao;
 
-import com.ksimeo.yanu.entities.models.Сert;
+import com.ksimeo.yanu.entities.models.Cert;
 import java.util.List;
 
 /**
@@ -13,7 +13,7 @@ import java.util.List;
  */
 public interface CertificateDAO {
 
-    Сert save(Сert certificate);
-    Сert findOne(int id);
-    List<Сert> findAll();
+    Cert save(Cert certificate);
+    Cert findOne(int id);
+    List<Cert> findAll();
 }

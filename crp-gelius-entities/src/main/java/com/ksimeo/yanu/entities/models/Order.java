@@ -1,6 +1,7 @@
 package com.ksimeo.yanu.entities.models;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -10,13 +11,13 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "orders")
-public class Order {
+public class Order implements Serializable {
     @Id
     @GeneratedValue
     private int id;
     @Column
     @ManyToOne
-    private Сert certificate;
+    private Cert certificate;
     @Column
     @OneToOne
     private Plan plan;
@@ -46,18 +47,18 @@ public class Order {
         this.createDate = new Date();
     }
 
-    public Order(Сert certificate, int quantity, User manager) {
+    public Order(Cert certificate, int quantity, User manager) {
         this.certificate = certificate;
         this.quantity = quantity;
         this.manager = manager;
         this.createDate = new Date();
     }
 
-    public Сert getCertificate() {
+    public Cert getCertificate() {
         return certificate;
     }
 
-    public void setCertificate(Сert certificate) {
+    public void setCertificate(Cert certificate) {
         this.certificate = certificate;
     }
 

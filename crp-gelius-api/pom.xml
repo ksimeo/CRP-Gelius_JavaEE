@@ -10,7 +10,7 @@
   <artifactId>crp-gelius-api</artifactId>
   <packaging>jar</packaging>
   <version>1.0</version>
-  <name>CRP_Gelius_API</name>
+  <name>CRP-Gelius_API</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -26,6 +26,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>CRP_Gelius_APIs</finalName>
+    <finalName>CRP-Gelius_APIs</finalName>
   </build>
 </project>
