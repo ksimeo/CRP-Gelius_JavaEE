@@ -1,6 +1,6 @@
-package com.ksimeo.yanu.impl.controllers;
+package com.ksimeo.yanu.repository.controllers;
 
-import com.ksimeo.yanu.entities.models.User;
+import com.ksimeo.yanu.entities.models.Plan;
 import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.Before;
@@ -21,15 +21,15 @@ import org.springframework.web.context.WebApplicationContext;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"file:./crp-gelius-repository/src/main/webapp/WEB-INF/dispatcher-servlet.xml"})
 @WebAppConfiguration
-public class CertCtrlTest extends TestCase {
+public class PlanCtrlTest extends TestCase {
     @InjectMocks
-    private CertCtrl certCtrl;
+    private PlanCtrl planCtrl;
 
     private MockMvc mockMvc;
 
     private WebApplicationContext webApplicationContext;
 
-    private User createUser;
+    private Plan createdPlan;
 
     @Before
     public void setUp() throws Exception {
@@ -37,17 +37,17 @@ public class CertCtrlTest extends TestCase {
     }
 
     @Test
-    public void addCert() throws Exception {
+    public void addPlan() throws Exception {
 
     }
 
     @Test
-    public void getCertById() throws Exception {
+    public void getPlanById() throws Exception {
 
     }
 
     @Test
-    public void getAllCerts() throws Exception {
+    public void getAllPlans() throws Exception {
 
     }
 
@@ -56,4 +56,3 @@ public class CertCtrlTest extends TestCase {
 
     }
 }
-

@@ -1,4 +1,4 @@
-package com.ksimeo.yanu.impl.config;
+package com.ksimeo.yanu.repository.config;
 
 /**
  * @author Ksimeo. Created on 11.10.2016 at 15:38 for "crp-gelius" project.

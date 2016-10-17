@@ -1,7 +1,7 @@
-package com.ksimeo.yanu.impl.controllers;
+package com.ksimeo.yanu.repository.controllers;
 
 import com.ksimeo.yanu.entities.models.Cert;
-import com.ksimeo.yanu.impl.dao.CertDAO;
+import com.ksimeo.yanu.repository.dao.CertDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,4 +1,4 @@
-package com.ksimeo.yanu.impl.config;
+package com.ksimeo.yanu.repository.config;
 
 
 import org.springframework.context.annotation.Bean;
@@ -21,7 +21,7 @@ import javax.persistence.EntityManagerFactory;
  * @since 1.0
  */
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "com.ksimeo.yanu.impl.config")
+@EnableJpaRepositories(basePackages = "com.ksimeo.yanu.repository.config")
 @Configuration
 public class JPAConfiguration {
 

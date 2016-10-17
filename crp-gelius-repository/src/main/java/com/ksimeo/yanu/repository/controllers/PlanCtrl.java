@@ -1,8 +1,8 @@
-package com.ksimeo.yanu.impl.controllers;
+package com.ksimeo.yanu.repository.controllers;
 
 
 import com.ksimeo.yanu.entities.models.Plan;
-import com.ksimeo.yanu.impl.dao.PlanDAO;
+import com.ksimeo.yanu.repository.dao.PlanDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

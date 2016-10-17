@@ -1,6 +1,6 @@
-package com.ksimeo.yanu.impl.controllers;
+package com.ksimeo.yanu.repository.controllers;
 
-import com.ksimeo.yanu.entities.models.Order;
+import com.ksimeo.yanu.entities.models.User;
 import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.Before;
@@ -21,15 +21,15 @@ import org.springframework.web.context.WebApplicationContext;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"file:./crp-gelius-repository/src/main/webapp/WEB-INF/dispatcher-servlet.xml"})
 @WebAppConfiguration
-public class OrderCtrlTest extends TestCase {
+public class UserCtrlTest extends TestCase {
     @InjectMocks
-    private OrderCtrl orderCtrl;
+    private UserCtrl userCtrl;
 
     private MockMvc mockMvc;
 
     private WebApplicationContext webApplicationContext;
 
-    private Order createdOrder;
+    private User createUser;
 
     @Before
     public void setUp() throws Exception {
@@ -37,17 +37,17 @@ public class OrderCtrlTest extends TestCase {
     }
 
     @Test
-    public void addOrder() throws Exception {
+    public void addUser() throws Exception {
 
     }
 
     @Test
-    public void getOrderById() throws Exception {
+    public void getUserById() throws Exception {
 
     }
 
     @Test
-    public void getAllOrders() throws Exception {
+    public void getAllUsers() throws Exception {
 
     }
 

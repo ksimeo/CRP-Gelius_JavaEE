@@ -1,4 +1,4 @@
-package com.ksimeo.yanu.impl.dao;
+package com.ksimeo.yanu.repository.dao;
 
 import com.ksimeo.yanu.entities.models.Order;
 import org.springframework.data.repository.CrudRepository;

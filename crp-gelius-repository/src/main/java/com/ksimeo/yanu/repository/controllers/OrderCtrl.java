@@ -1,7 +1,7 @@
-package com.ksimeo.yanu.impl.controllers;
+package com.ksimeo.yanu.repository.controllers;
 
 import com.ksimeo.yanu.entities.models.Order;
-import com.ksimeo.yanu.impl.dao.OrderDAO;
+import com.ksimeo.yanu.repository.dao.OrderDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

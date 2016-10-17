@@ -1,4 +1,4 @@
-package com.ksimeo.yanu.impl.dao;
+package com.ksimeo.yanu.repository.dao;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

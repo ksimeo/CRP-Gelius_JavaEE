@@ -5,14 +5,12 @@ import com.ksimeo.yanu.entities.gto.UserGTO;
 import com.ksimeo.yanu.entities.models.User;
 import com.ksimeo.yanu.impl.config.RepositoryConfig;
 import com.ksimeo.yanu.impl.helpers.EncoderHelper;
+import com.ksimeo.yanu.impl.helpers.RestHelper;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-import static com.ksimeo.yanu.impl.helpers.RestHelper.sendGet;
-import static com.ksimeo.yanu.impl.helpers.RestHelper.sendPost;
 
 /**
  * @author Ksimeo. Created on 09.10.2016 at 15:19 for "crp-gelius" project.
@@ -34,7 +32,7 @@ public class UsersServImpl implements UsersService {
     public User addUser(User usr) throws Exception {
         fullURL = REPOSITORY_URL + "/addusr";
         dataToSend = om.writeValueAsString(usr);
-        echoData = sendPost(fullURL, dataToSend);
+        echoData = RestHelper.sendPost(fullURL, dataToSend);
         return (User) om.readValue(echoData, new TypeReference<User>(){});
     }
 
@@ -42,13 +40,13 @@ public class UsersServImpl implements UsersService {
         fullURL = REPOSITORY_URL + "/getusrbyloginpassw";
         password = EncoderHelper.String2Hash(password);
         dataToSend = om.writeValueAsString(new UserGTO(login, password));
-        echoData = sendPost(fullURL, dataToSend);
+        echoData = RestHelper.sendPost(fullURL, dataToSend);
         return (User) om.readValue(echoData, new TypeReference<User>() { });
     }
 
     public List<User> getUsers() throws Exception {
         fullURL = REPOSITORY_URL + "/getallusrs";
-        echoData = sendGet(fullURL);
+        echoData = RestHelper.sendGet(fullURL);
         return om.readValue(echoData, new TypeReference<List<User>>() {
         });
     }
@@ -59,6 +57,6 @@ public class UsersServImpl implements UsersService {
 
     public void delUser(int id) throws Exception{
         fullURL = REPOSITORY_URL + "/delusr/" + id;
-        sendGet(fullURL);
+        RestHelper.sendGet(fullURL);
     }
 }
