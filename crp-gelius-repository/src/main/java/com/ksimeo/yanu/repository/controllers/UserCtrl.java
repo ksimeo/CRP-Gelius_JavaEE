@@ -29,7 +29,7 @@ public class UserCtrl {
         return usrDao.save(user);
     }
 
-    @RequestMapping(value = "/getallusers", method = RequestMethod.GET, consumes = "application/json")
+    @RequestMapping(value = "/getallusrs", method = RequestMethod.GET, consumes = "application/json")
     @ResponseBody
     public List<User> getAllUsers() {
         return (List<User>)usrDao.findAll();

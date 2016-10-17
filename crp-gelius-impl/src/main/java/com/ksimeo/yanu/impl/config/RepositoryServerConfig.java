@@ -5,7 +5,7 @@ package com.ksimeo.yanu.impl.config;
  * @version 1.0
  * @since 1.0
  */
-public class RepositoryConfig {
+public class RepositoryServerConfig {
 
     public static final String URL = "http://localhost:6060";
 }

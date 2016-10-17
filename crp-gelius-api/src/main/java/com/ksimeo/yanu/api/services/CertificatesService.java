@@ -11,8 +11,8 @@ import java.util.List;
  */
 public interface CertificatesService {
 
-    Cert addCertificate(Cert certificate);
-    Cert getCertificate(int id);
-    List<Cert> getCertificates();
-    void deleteCertificate(int id);
+    Cert addCertificate(Cert certificate) throws Exception;
+    Cert getCertificate(int id) throws Exception;
+    List<Cert> getCertificates() throws Exception;
+    void deleteCertificate(int id) throws Exception;
 }

@@ -2,14 +2,20 @@ package com.ksimeo.yanu.impl.services;
 
 import com.ksimeo.yanu.api.repository.dao.OrderDAO;
 import com.ksimeo.yanu.api.services.OrdersService;
-import com.ksimeo.yanu.impl.dao.OrderDaoMock;
 import com.ksimeo.yanu.entities.models.Order;
 import com.ksimeo.yanu.entities.models.Parcel;
+import com.ksimeo.yanu.impl.config.RepositoryServerConfig;
+import com.ksimeo.yanu.impl.dao.OrderDaoMock;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static com.ksimeo.yanu.impl.helpers.RestHelper.sendGet;
+import static com.ksimeo.yanu.impl.helpers.RestHelper.sendPost;
 
 /**
  * @author Ksimeo. Created on 09.10.2016 at 16:31 for "crp-gelius" project.
@@ -19,18 +25,39 @@ import java.util.Map;
 @Service
 public class OrdersServImpl implements OrdersService {
 
+    private static final String REPOSITORY_SERVER_URL = RepositoryServerConfig.URL;
+
+    private String fullURL;
+    private String echoData;
+    private String dataToSend;
+
+    private ObjectMapper om;
+
     private OrderDAO orderDAO = new OrderDaoMock();
 
-    public Order addOrder(Order order) {
-        return orderDAO.save(order);
+    public OrdersServImpl() {
+        om = new ObjectMapper();
     }
 
-    public Order getOrder(int id) {
-        return orderDAO.findOne(id);
+    public Order addOrder(Order order) throws Exception {
+        fullURL = REPOSITORY_SERVER_URL + "/addordr";
+        dataToSend = om.writeValueAsString(order);
+        echoData = sendPost(fullURL, dataToSend);
+        return om.readValue(echoData, new TypeReference<Order>() {
+        });
     }
 
-    public List<Order> getOrders() {
-        return orderDAO.findAll();
+    public Order getOrder(int id) throws Exception {
+        fullURL = REPOSITORY_SERVER_URL + "/getorder/" + id;
+        echoData = sendGet(fullURL);
+        return om.readValue(echoData, new TypeReference<Order>() {
+        });
+    }
+
+    public List<Order> getOrders() throws Exception {
+        fullURL = REPOSITORY_SERVER_URL + "/getordrs";
+        echoData = sendGet(fullURL);
+        return om.readValue(echoData, new TypeReference<Order>() { });
     }
 
     public List<Order> getActualOrders() {

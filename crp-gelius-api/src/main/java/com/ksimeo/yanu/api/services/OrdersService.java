@@ -11,11 +11,11 @@ import java.util.List;
  * @since 1.0
  */
 public interface OrdersService {
-    Order addOrder(Order order);
-    Order getOrder(int id);
-    List<Order> getOrders();
-    List<Order> getOldOrders();
-    List<Order> getNewOrders();
-    List<Order> getActualOrders();
-    Parcel<Order> getOrderPage(int id);
+    Order addOrder(Order order) throws Exception;
+    Order getOrder(int id) throws Exception;
+    List<Order> getOrders() throws Exception;
+    List<Order> getOldOrders() throws Exception;
+    List<Order> getNewOrders() throws Exception;
+    List<Order> getActualOrders() throws Exception;
+    Parcel<Order> getOrderPage(int id) throws Exception;
 }

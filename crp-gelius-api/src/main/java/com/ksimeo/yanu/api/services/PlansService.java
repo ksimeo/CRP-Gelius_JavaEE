@@ -1,7 +1,7 @@
 package com.ksimeo.yanu.api.services;
 
+import com.ksimeo.yanu.entities.models.Parcel;
 import com.ksimeo.yanu.entities.models.Plan;
-import com.ksimeo.yanu.entities.models.PlansParcel;
 
 import java.util.List;
 
@@ -12,14 +12,14 @@ import java.util.List;
  */
 public interface PlansService {
 
-    Plan addPlan(Plan plan);
-    Plan getPlan(int id);
-    List<Plan> getPlans();
-    List<Plan> getActualPlans();
-    List<Plan> getPlansForTaiwanese();
-    List<Plan> getPlansForBobst();
-    List<Plan> getPlansForPackaging();
-    List<Plan> getPlansForStorage();
-    List<Plan> getOldPlans();
-    PlansParcel getPage(int page);
+    Plan addPlan(Plan plan) throws Exception;
+    Plan getPlan(int id) throws Exception;
+    List<Plan> getPlans() throws Exception;
+    List<Plan> getActualPlans() throws Exception;
+    List<Plan> getPlansForTaiwanese() throws Exception;
+    List<Plan> getPlansForBobst() throws Exception;
+    List<Plan> getPlansForPackaging() throws Exception;
+    List<Plan> getPlansForStorage() throws Exception;
+    List<Plan> getOldPlans() throws Exception;
+    Parcel<Plan> getPage(int page) throws Exception;
 }
