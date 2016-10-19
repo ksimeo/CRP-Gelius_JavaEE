@@ -1,6 +1,6 @@
 package com.ksimeo.yanu.admin.controllers;
 
-import com.ksimeo.yanu.admin.models.User;
+import com.ksimeo.yanu.entities.models.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,6 +11,8 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
+ *
+ *
  * @author Ksimeo. Created on 08.10.2016 at 21:28 for "untitled" project.
  * @version 1.0
  * @since 1.0

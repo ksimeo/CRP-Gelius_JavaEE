@@ -1,6 +1,6 @@
 package com.ksimeo.yanu.admin.controllers;
 
-import com.ksimeo.yanu.admin.models.User;
+import com.ksimeo.yanu.entities.models.User;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;

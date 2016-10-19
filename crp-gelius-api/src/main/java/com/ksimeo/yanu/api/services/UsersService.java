@@ -1,5 +1,6 @@
 package com.ksimeo.yanu.api.services;
 
+import com.ksimeo.yanu.entities.gto.UserGTO;
 import com.ksimeo.yanu.entities.models.User;
 
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.List;
 public interface UsersService {
 
     User addUser(User usr) throws Exception;
-    User getUser(String login, String passw) throws Exception;
+    User getUser(UserGTO userInfo) throws Exception;
     List<User> getUsers() throws Exception;
     List<User> getUsers(int role) throws Exception;
     void delUser(int id) throws Exception;

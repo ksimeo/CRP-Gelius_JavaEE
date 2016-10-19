@@ -43,10 +43,12 @@ public class UsersServImpl implements UsersService {
         return (User) om.readValue(echoData, new TypeReference<User>(){});
     }
 
-    public User getUser(String login, String password) throws Exception {
+    public User getUser(UserGTO userInfo) throws Exception {
         fullURL = REPOSITORY_URL + "/getusrbyloginpassw";
+        String password = userInfo.getPassword();
         password = EncoderHelper.String2Hash(password);
-        dataToSend = om.writeValueAsString(new UserGTO(login, password));
+        userInfo.setPassword(password);
+        dataToSend = om.writeValueAsString(userInfo);
         echoData = sendPost(fullURL, dataToSend);
         return (User) om.readValue(echoData, new TypeReference<User>() { });
     }

@@ -64,6 +64,13 @@
 		  <version>${spring.version}</version>
 	  </dependency>
 	  <!--/TESTING-->
+	  <!--UTILITES-->
+	  <dependency>
+		  <groupId>org.codehaus.jackson</groupId>
+		  <artifactId>jackson-mapper-asl</artifactId>
+		  <version>1.9.13</version>
+	  </dependency>
+	  <!--/UTILITES-->
   </dependencies>
   <build>
     <finalName>CRP-Gelius_Repository</finalName>

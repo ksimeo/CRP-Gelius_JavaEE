@@ -1,8 +1,8 @@
 package com.ksimeo.yanu.admin.controllers;
 
-import com.ksimeo.yanu.admin.gto.UserGTO;
-import com.ksimeo.yanu.admin.models.User;
-import com.ksimeo.yanu.admin.services.UserService;
+import com.ksimeo.yanu.entities.models.User;
+import com.ksimeo.yanu.api.services.UsersService;
+import com.ksimeo.yanu.entities.gto.UserGTO;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
@@ -13,19 +13,29 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 
+
 /**
+ * Данный сервлет выполняет запрос пользователя на вход в систему, проверяет логин и пароль, и в случае успеха
+ * переадресовывает его на главную страницу администратора системы.
+ *
+ *
  * @author Ksimeo. Created on 08.10.2016 at 19:11 for "untitled" project.
  * @version 1.0
  * @since 1.0
  */
 @WebServlet(urlPatterns = "/login")
 public class LogInCtrl extends HttpServlet {
-@Autowired
-    private UserService usrServ;
-//    = new UserServImpl();
+    @Autowired
+    private UsersService usrServ;
     //Инициализация логера
     private static final Logger log = Logger.getLogger(LogInCtrl.class);
 
+    /**
+     * В данном методе происходит инициализация Spring IoC и вводится сообщение логгера.
+     *
+     * @param config
+     * @throws ServletException
+     */
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
