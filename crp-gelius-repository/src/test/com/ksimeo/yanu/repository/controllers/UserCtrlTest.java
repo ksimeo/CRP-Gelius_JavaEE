@@ -67,7 +67,7 @@ public class UserCtrlTest extends TestCase {
     public void addUser() throws Exception {
         User testUser = new User("TestUser", "test123", 0);
         String toSend = mapper.writeValueAsString(testUser);
-        MvcResult res = mockMvc.perform(post("/addusr").contentType(MediaType.APPLICATION_JSON))
+        MvcResult res = mockMvc.perform(post("/addusr").content(toSend).contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andReturn();
