@@ -30,7 +30,7 @@ public class JPAConfiguration {
         DriverManagerDataSource driverManagerDataSource =
                 new DriverManagerDataSource();
         driverManagerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/vote_system");
+        driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/crp_gelius");
         driverManagerDataSource.setUsername("root");
         driverManagerDataSource.setPassword("root");
 

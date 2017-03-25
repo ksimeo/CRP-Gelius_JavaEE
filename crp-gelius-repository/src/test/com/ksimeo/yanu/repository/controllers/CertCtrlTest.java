@@ -5,8 +5,8 @@ import com.ksimeo.yanu.repository.dao.CertDAO;
 import junit.framework.TestCase;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
-import org.junit.After;
-import org.junit.Before;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -49,7 +49,7 @@ public class CertCtrlTest extends TestCase {
     private WebApplicationContext webApplicationContext;
 
 
-    @Before
+    @BeforeClass
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
@@ -98,7 +98,7 @@ public class CertCtrlTest extends TestCase {
         assertEquals(certs.size(), 3);
     }
 
-    @After
+    @AfterClass
     public void tearDown() throws Exception {
         certDao.deleteAll();
     }

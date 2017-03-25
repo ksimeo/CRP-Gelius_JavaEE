@@ -1,6 +1,6 @@
 package com.ksimeo.yanu.impl.services;
 
-import com.ksimeo.yanu.api.repository.dao.CertificateDAO;
+import com.ksimeo.yanu.repository.dao.CertificateDAO;
 import com.ksimeo.yanu.api.services.CertificatesService;
 import com.ksimeo.yanu.entities.models.Cert;
 import com.ksimeo.yanu.impl.config.RepositoryServerConfig;

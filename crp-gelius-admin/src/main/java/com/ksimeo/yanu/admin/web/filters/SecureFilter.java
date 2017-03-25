@@ -1,4 +1,4 @@
-package com.ksimeo.yanu.admin.filters;
+package com.ksimeo.yanu.admin.web.filters;
 
 import com.ksimeo.yanu.entities.models.User;
 

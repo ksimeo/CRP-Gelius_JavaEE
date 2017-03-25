@@ -1,6 +1,6 @@
 package com.ksimeo.yanu.impl.dao;
 
-import com.ksimeo.yanu.api.repository.dao.OrderDAO;
+import com.ksimeo.yanu.repository.dao.OrderDAO;
 import com.ksimeo.yanu.entities.models.Order;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package com.ksimeo.yanu.impl.services;
 
-import com.ksimeo.yanu.api.repository.dao.PlanDAO;
+import com.ksimeo.yanu.repository.dao.PlanDAO;
 import com.ksimeo.yanu.api.services.PlansService;
 import com.ksimeo.yanu.entities.models.Parcel;
 import com.ksimeo.yanu.entities.models.Plan;

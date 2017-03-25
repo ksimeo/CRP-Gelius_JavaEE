@@ -1,11 +1,14 @@
 package com.ksimeo.yanu.repository.dao;
 
+import com.ksimeo.yanu.entities.models.Cert;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import com.ksimeo.yanu.entities.models.Cert;
 
 /**
- * @author Ksimeo. Created on 15.10.2016 at 14:24 for "crp-gelius" project.
+ *
+ *
+ *
+ * @author Ksimeo. Created on 19.07.2016 at 13:38 for "crp-gelius" project.
  * @version 1.0
  * @since 1.0
  */

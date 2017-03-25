@@ -2,7 +2,7 @@ package com.ksimeo.yanu.impl.dao;
 
 import com.ksimeo.yanu.entities.models.User;
 import com.ksimeo.yanu.entities.models.Cert;
-import com.ksimeo.yanu.api.repository.dao.CertificateDAO;
+import com.ksimeo.yanu.repository.dao.CertificateDAO;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

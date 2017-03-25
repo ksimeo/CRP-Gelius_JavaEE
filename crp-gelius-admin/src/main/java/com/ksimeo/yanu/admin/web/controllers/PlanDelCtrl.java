@@ -1,4 +1,4 @@
-package com.ksimeo.yanu.admin.controllers;
+package com.ksimeo.yanu.admin.web.controllers;
 
 import com.ksimeo.yanu.entities.models.User;
 
@@ -11,12 +11,12 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * @author Ksimeo. Created on 08.10.2016 at 21:26 for "untitled" project.
+ * @author Ksimeo. Created on 08.10.2016 at 21:36 for "untitled" project.
  * @version 1.0
  * @since 1.0
  */
-@WebServlet(urlPatterns = "/plans.do")
-public class PlansCtrl extends HttpServlet {
+@WebServlet(urlPatterns = "/delplan.do")
+public class PlanDelCtrl extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();

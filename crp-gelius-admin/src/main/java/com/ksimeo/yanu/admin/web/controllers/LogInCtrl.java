@@ -1,4 +1,4 @@
-package com.ksimeo.yanu.admin.controllers;
+package com.ksimeo.yanu.admin.web.controllers;
 
 import com.ksimeo.yanu.entities.models.User;
 import com.ksimeo.yanu.api.services.UsersService;

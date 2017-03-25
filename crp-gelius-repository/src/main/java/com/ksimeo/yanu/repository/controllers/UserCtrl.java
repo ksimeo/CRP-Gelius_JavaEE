@@ -2,7 +2,7 @@ package com.ksimeo.yanu.repository.controllers;
 
 import com.ksimeo.yanu.entities.gto.UserGTO;
 import com.ksimeo.yanu.entities.models.User;
-import com.ksimeo.yanu.repository.dao.UserDAO;
+import com.ksimeo.yanu.admin.dao.dao.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;

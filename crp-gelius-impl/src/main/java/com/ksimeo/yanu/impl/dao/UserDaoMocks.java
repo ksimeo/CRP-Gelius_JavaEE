@@ -1,6 +1,6 @@
 package com.ksimeo.yanu.impl.dao;
 
-import com.ksimeo.yanu.api.repository.dao.UserDAO;
+import com.ksimeo.yanu.repository.dao.UserDAO;
 import com.ksimeo.yanu.entities.models.User;
 import org.springframework.stereotype.Repository;
 

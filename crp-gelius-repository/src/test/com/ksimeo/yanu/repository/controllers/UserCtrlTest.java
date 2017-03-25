@@ -6,7 +6,7 @@ import junit.framework.TestCase;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 import org.junit.After;
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -48,19 +48,17 @@ public class UserCtrlTest extends TestCase {
 
     private ObjectMapper mapper;
 
-    private User testUser1;
-    private User testUser2;
-    private String toSend;
+
     @Autowired
     private UserDAO userDao;
 
-    @Before
+    @BeforeClass
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
         mapper = new ObjectMapper();
-        testUser1 = new User("TestUser1", "test123", 1);
-        testUser2 = new User("TestUser2", "test123", 2);
+        User testUser1 = new User("TestUser1", "test123", 1);
+        User testUser2 = new User("TestUser2", "test123", 2);
         userDao.save(testUser1);
         userDao.save(testUser2);
     }
@@ -68,7 +66,7 @@ public class UserCtrlTest extends TestCase {
     @Test
     public void addUser() throws Exception {
         User testUser = new User("TestUser", "test123", 0);
-        toSend = mapper.writeValueAsString(testUser);
+        String toSend = mapper.writeValueAsString(testUser);
         MvcResult res = mockMvc.perform(post("/addusr").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
@@ -91,7 +89,6 @@ public class UserCtrlTest extends TestCase {
 
     @Test
     public void getAllUsers() throws Exception {
-
         MvcResult res = mockMvc.perform(get("/usrs").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
@@ -105,6 +102,6 @@ public class UserCtrlTest extends TestCase {
 
     @After
     public void tearDown() throws Exception {
-
+        userDao.deleteAll();
     }
 }

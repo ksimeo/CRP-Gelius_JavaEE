@@ -1,4 +1,4 @@
-package com.ksimeo.yanu.admin.controllers;
+package com.ksimeo.yanu.admin.web.controllers;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
